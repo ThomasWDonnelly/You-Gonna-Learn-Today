@@ -1,4 +1,4 @@
-const { Signale } = require("signale");
+const { Signale } = require("signale-logger");
 
 const signale = new Signale();
 signale.error("Default Error Log");
