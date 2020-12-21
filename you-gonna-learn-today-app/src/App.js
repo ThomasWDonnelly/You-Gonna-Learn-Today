@@ -1,7 +1,10 @@
+import React, { useState } from "react";
 import logo from "./img/logo.svg";
 import "./styles/App.css";
+import FlashcardList from "./components/flashcardList";
 
 function App() {
+  const [flashcards, setFlashcards] = useState();
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +21,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <FlashcardList flashcards={flashcards} />
     </div>
   );
 }
