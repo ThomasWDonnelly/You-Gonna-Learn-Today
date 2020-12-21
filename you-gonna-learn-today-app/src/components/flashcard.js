@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function flashcard({ flashcard }) {
+export default function Flashcard({ flashcard }) {
   return <div>{flashcard.question}</div>;
 }

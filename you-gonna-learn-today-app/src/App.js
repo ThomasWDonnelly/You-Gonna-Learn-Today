@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import logo from "./img/logo.svg";
 import "./styles/App.css";
-import FlashcardList from "./components/flashcardList";
+import FlashcardList from "./components/FlashcardList";
 
 function App() {
-  const [flashcards, setFlashcards] = useState();
+  const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS);
   return (
     <div className="App">
       <header className="App-header">
