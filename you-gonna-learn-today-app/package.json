@@ -1,7 +1,7 @@
 {
   "name": "you-gonna-learn-today-app",
-  "description": "A flash card app using React.js",
-  "version": "0.1.0",
+  "description": "A simple flash card app using React.js",
+  "version": "1.0.0",
   "private": true,
   "repository": "ThomasWDonnelly/You-Gonna-Learn-Today",
   "author": "Thomas W. Donnelly",

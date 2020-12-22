@@ -1,11 +1,24 @@
 import React, { useState, useEffect, useRef } from "react";
-import logo from "./img/logo.svg";
 import "./styles/App.css";
 import axios from "axios";
 import FlashcardList from "./components/FlashcardList";
 
 function App() {
-  const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS);
+  const SAMPLE_QUESTIONS = [
+    {
+      id: 1,
+      question: "What is 1 + 2?",
+      answer: "3",
+      options: ["1", "2", "3", "4"],
+    },
+    {
+      id: 2,
+      question: "What is 2 + 2?",
+      answer: "4",
+      options: ["1", "2", "3", "4"],
+    },
+  ];
+  const [flashcards, setFlashcards] = useState([] ? SAMPLE_QUESTIONS : []);
   const [categories, setCategories] = useState([]);
 
   const categoryEl = useRef();
@@ -68,7 +81,7 @@ function App() {
           </select>
         </div>
         <div className="form-group">
-          <label htmlfor="amount">Number of Questions</label>
+          <label htmlFor="amount">Number of Questions</label>
           <input
             type="number"
             id="amount"
@@ -88,21 +101,5 @@ function App() {
     </>
   );
 }
-
-// Sample Questions
-const SAMPLE_FLASHCARDS = [
-  {
-    id: 1,
-    question: "What is 1 + 2?",
-    answer: "3",
-    options: ["1", "2", "3", "4"],
-  },
-  {
-    id: 2,
-    question: "What is 2 + 2?",
-    answer: "4",
-    options: ["1", "2", "3", "4"],
-  },
-];
 
 export default App;
